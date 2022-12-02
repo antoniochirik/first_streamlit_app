@@ -45,7 +45,7 @@ streamlit.header("The fruit load list contains:")
 if streamlit.button('Get Fruit List'):
     my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
     my_data_list = fruit_load_list()
-    streamlit.dataframe(my_data_rows)
+    streamlit.dataframe(my_data_list)
 
 add_my_fruit = streamlit.text_input('What fruit would you like to abb?','Kiwi')
 # my_cur.execute(f"INSERT INTO fruit_load_list VALUES ({add_my_fruit})")
